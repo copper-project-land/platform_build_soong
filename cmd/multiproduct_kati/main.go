@@ -32,10 +32,7 @@ import (
 	"android/soong/ui/tracer"
 )
 
-// We default to number of cpus / 4, which seems to be the sweet spot for my
-// system. I suspect this is mostly due to memory or disk bandwidth though, and
-// may depend on the size ofthe source tree, so this probably isn't a great
-// default.
+// We default to number of cpus.
 func detectNumJobs() int {
 	return runtime.NumCPU()
 }
